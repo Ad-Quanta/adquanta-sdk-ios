@@ -1,0 +1,6 @@
+framework module adquanta_ads_sdk {
+  umbrella header "adquanta_ads_sdk.h"
+  export *
+
+  module * { export * }
+}
