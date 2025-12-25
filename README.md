@@ -11,8 +11,7 @@ adquanta-sdk-ios/
 │   ├── Frameworks/         # 依赖框架
 │   ├── include/            # 公共头文件
 │   ├── adquanta-ads-sdk.podspec  # CocoaPods 配置文件
-│   ├── README.md           # SDK 使用文档
-│   └── INTEGRATION.md      # 集成指南
+│   └── README.md           # SDK 使用文档
 ├── sdk_demo/               # Demo 项目目录
 │   ├── sdk_demo.xcodeproj  # Xcode 项目
 │   ├── sdk_demo.xcworkspace # CocoaPods workspace
@@ -38,12 +37,11 @@ pod install
 
 ### 手动集成
 
-请参考 `sdk/INTEGRATION.md` 文件了解详细的手动集成步骤。
+请参考 `sdk/README.md` 文件了解详细的手动集成步骤。
 
 ## 📚 文档
 
 - **SDK 文档**: 查看 `sdk/README.md`
-- **集成指南**: 查看 `sdk/INTEGRATION.md`
 - **Demo 项目**: 查看 `sdk_demo/` 目录
 
 ## 📞 技术支持
