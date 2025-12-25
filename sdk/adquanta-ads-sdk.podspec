@@ -26,20 +26,20 @@ SDK 集成了多个主流广告平台，提供统一的API接口，简化广告�
   # 依赖框架使用 xcframework 格式
   # 只包含核心依赖：TradPlusAdSDK, Google-Mobile-Ads-SDK, GoogleAds-IMA-iOS-SDK
   s.vendored_frameworks = [
-    'adquanta_ads_sdk.framework',
-    'Frameworks/TradPlusAds.xcframework',
-    'Frameworks/TPCrossAdapter.xcframework',
-    'Frameworks/GoogleMobileAds.xcframework',
-    'Frameworks/GoogleInteractiveMediaAds.xcframework'
+    'sdk/adquanta_ads_sdk.framework',
+    'sdk/Frameworks/TradPlusAds.xcframework',
+    'sdk/Frameworks/TPCrossAdapter.xcframework',
+    'sdk/Frameworks/GoogleMobileAds.xcframework',
+    'sdk/Frameworks/GoogleInteractiveMediaAds.xcframework'
   ]
 
   # 关键配置：保护 Framework 结构，避免资源复制脚本处理内部 bundle
   # preserve_paths 确保 CocoaPods 不会尝试复制或处理这些路径下的资源
   s.preserve_paths = [
-    'adquanta_ads_sdk.framework',
-    'Frameworks/*.xcframework',
-    'Frameworks/*.framework',
-    'Frameworks/*.bundle'
+    'sdk/adquanta_ads_sdk.framework',
+    'sdk/Frameworks/*.xcframework',
+    'sdk/Frameworks/*.framework',
+    'sdk/Frameworks/*.bundle'
   ]
 
   # 重要：明确不设置 resources，因为所有资源都已嵌入在 framework 内部
@@ -75,7 +75,7 @@ SDK 集成了多个主流广告平台，提供统一的API接口，简化广告�
     'VALID_ARCHS' => 'arm64',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 x86_64 i386',
     # 确保 framework 搜索路径正确
-    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/adquanta-ads-sdk $(PODS_ROOT)/adquanta-ads-sdk/Frameworks'
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/adquanta-ads-sdk/sdk $(PODS_ROOT)/adquanta-ads-sdk/sdk/Frameworks'
   }
 
   s.documentation_url = 'https://github.com/Ad-Quanta/adquanta-sdk-ios'
